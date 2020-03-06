@@ -1,0 +1,83 @@
+
+(rules PCB MacBook Pro 2016-up Data Recovery Breakout Adapter
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout on)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 218)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 160.0)
+    (clear 110.2)
+    (clear 80.0 (type smd_to_turn_gap))
+    (clear 27.6 (type smd_smd))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 160.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(D1-Pad1)" "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "LPSR_EN_LB_L" "Net-(SW1-Pad3)" "LB_PIN_1" "LB_PIN_41"
+    "LB_PIN_42" "LB_PIN_40" "LB_PIN_37" "LB_PIN_38" "LB_PIN_31" "LB_PIN_32" "LB_PIN_29" "LB_PIN_17"
+    "LB_PIN_13" "LB_PIN_12" "LB_PIN_7" "LB_PIN_5" "LB_PIN_2" "MIGRATION_PIN_1" "MIGRATION_PIN_3" "MIGRATION_PIN_6"
+    "MIGRATION_PIN_5" "MIGRATION_PIN_7" "MIGRATION_PIN_11" "MIGRATION_PIN_13" "MIGRATION_PIN_17" "MIGRATION_PIN_19" "MIGRATION_PIN_23" "MIGRATION_PIN_25"
+    "MIGRATION_PIN_30" "MIGRATION_PIN_29" "MIGRATION_PIN_32" "MIGRATION_PIN_31" "MIGRATION_PIN_35" "MIGRATION_PIN_37" "MIGRATION_PIN_43" "Net-(J3-Pad45)"
+    "Net-(J3-Pad43)" "Net-(J3-Pad41)" "Net-(J3-Pad39)" "Net-(J3-Pad37)" "Net-(J3-Pad35)" "Net-(J3-Pad31)" "Net-(J3-Pad29)" "Net-(J3-Pad25)"
+    "PCIE_SSD_R2D_C_P<0>" "PCIE_SSD_D2R_N<0>" "PCIE_SSD_D2R_P<0>" "SSD_CLKREQ_L" "SSD_RESET_L" "STORAGE_EN" "SSD_PWR_EN_LB_L" "SSD_PWR_EN_L"
+    "SSD_BOOT_L" "Net-(J3-Pad1)" "MIGRATION_PIN_39" "MIGRATION_PIN_41" "MIGRATION_PIN_45"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 160.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
