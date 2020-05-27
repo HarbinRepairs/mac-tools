@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name MBP-2016-Non-Touchbar-SSD-Adapter-rescue)(type Legacy)(uri "${KIPRJMOD}/MBP 2016 Non-Touchbar SSD Adapter-rescue.lib")(options "")(descr ""))
+)
